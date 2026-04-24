@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohcine Sassioui - Portfolio Data Scientist</title>
+    <meta name="description" content="Portfolio de Data Scientist spécialisé en Machine Learning, Analyse de données et IA.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">Data<span>Sci</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h2 class="subtitle">Bonjour, je suis</h2>
+                <h1 class="title">Mohcine Sassioui</h1>
+                <h3 class="role">Data Scientist & AI Engineer</h3>
+                <p class="description">Je transforme les données brutes en informations exploitables et je conçois des modèles prédictifs performants pour résoudre des problèmes métiers complexes.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                    <a href="data scientist.pdf" class="btn btn-secondary" download>Télécharger mon CV</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="glass-card hero-glass">
+                    <div class="code-snippet">
+                        <span class="keyword">import</span> pandas <span class="keyword">as</span> pd<br>
+                        <span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestClassifier<br><br>
+                        <span class="comment"># Modélisation de l'avenir</span><br>
+                        model = RandomForestClassifier(n_estimators=<span class="number">100</span>)<br>
+                        model.fit(X_train, y_train)<br>
+                        <span class="function">print</span>(<span class="string">"Accuracy: 98.5%"</span>)
+                    </div>
+                </div>
+                <div class="blob"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné par l'intelligence artificielle et l'analyse de données, je possède une solide expertise dans le traitement de données à grande échelle et la création d'algorithmes d'apprentissage automatique.</p>
+                    <p>Mon objectif est d'aider les entreprises à prendre des décisions stratégiques basées sur la data. Je maîtrise l'ensemble du cycle de vie de la donnée : de l'extraction (ETL) à la mise en production des modèles (MLOps), en passant par l'analyse exploratoire et la data visualisation.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <i class="fas fa-database stat-icon"></i>
+                        <h4>Data Processing</h4>
+                        <p>ETL, Big Data, SQL</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-brain stat-icon"></i>
+                        <h4>Machine Learning</h4>
+                        <p>Scikit-learn, XGBoost, PyTorch</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="fas fa-chart-pie stat-icon"></i>
+                        <h4>Data Viz</h4>
+                        <p>Tableau, PowerBI, Plotly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Section -->
+    <section id="parcours" class="section">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+            <p class="section-subtitle">Mon évolution académique et professionnelle.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Data Scientist</h3>
+                        <h4>Entreprise Tech - Paris</h4>
+                        <span class="timeline-date">2024 - Présent</span>
+                        <p>Développement de modèles prédictifs, mise en place de pipelines de données (ETL) et création de tableaux de bord interactifs pour le suivi des KPI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Data Analyst Junior</h3>
+                        <h4>Startup FinTech</h4>
+                        <span class="timeline-date">2022 - 2024</span>
+                        <p>Analyse exploratoire de données, nettoyage de bases de données SQL et automatisation des rapports hebdomadaires.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <h3>Master en Data Science & IA</h3>
+                        <h4>Université d'Excellence</h4>
+                        <span class="timeline-date">2020 - 2022</span>
+                        <p>Formation avancée en Machine Learning, Deep Learning, statistiques et Big Data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Langages</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">R</span>
+                        <span class="tag">Bash</span>
+                    </div>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-robot"></i> Machine/Deep Learning</h3>
+                    <div class="tags">
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Keras</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Data Engineering & Cloud</h3>
+                    <div class="tags">
+                        <span class="tag">Pandas</span>
+                        <span class="tag">PySpark</span>
+                        <span class="tag">AWS / GCP</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                </div>
+                <!-- Skill Category 4 -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-chart-line"></i> Visualisation</h3>
+                    <div class="tags">
+                        <span class="tag">Matplotlib</span>
+                        <span class="tag">Seaborn</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets Récents</h2>
+            <p class="section-subtitle">Découvrez quelques-unes de mes réalisations en Data Science.</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #3b82f6;">
+                        <i class="fas fa-users-slash"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Prédiction d'Attrition Client (Churn)</h3>
+                        <p>Développement d'un modèle XGBoost pour identifier les clients à risque. Analyse de la feature importance pour orienter les campagnes marketing, résultant en une baisse de 15% du taux d'attrition.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-small">Python</span>
+                            <span class="tag tag-small">XGBoost</span>
+                            <span class="tag tag-small">Pandas</span>
+                            <span class="tag tag-small">SHAP</span>
+                        </div>
+                        <a href="projet-churn.html" class="btn-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #10b981;">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Analyse de Sentiments (NLP)</h3>
+                        <p>Création d'un pipeline NLP avec Hugging Face Transformers (BERT) pour analyser plus de 50 000 avis clients. Tableau de bord interactif pour suivre la satisfaction en temps réel.</p>
+                        <div class="project-tags">
+                            <span class="tag tag-small">PyTorch</span>
+                            <span class="tag tag-small">Transformers</span>
+                            <span class="tag tag-small">Streamlit</span>
+                        </div>
+                        <a href="projet-nlp.html" class="btn-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #8b5cf6;">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Système de Recommandation E-commerce</h3>
+                        <p>Implémentation d'un algorithme de filtrage collaboratif et basé sur le contenu pour suggérer des produits pertinents. Augmentation du panier moyen de 8% suite au déploiement (A/B test).</p>
+                        <div class="project-tags">
+                            <span class="tag tag-small">Spark MLlib</span>
+                            <span class="tag tag-small">Python</span>
+                            <span class="tag tag-small">Flask</span>
+                        </div>
+                        <a href="projet-reco.html" class="btn-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card">
+                    <h3>Discutons de vos données</h3>
+                    <p>Je suis actuellement ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour un projet ou simplement pour dire bonjour !</p>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-envelope"></i> contact@mon-email.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> France</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-kaggle"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form glass-card">
+                    <form id="portfolio-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required placeholder="Comment puis-je vous aider ?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Envoyer le message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="form-success" style="display:none; color: #10b981; margin-top: 15px; font-weight: bold; text-align: center;">
+                        Merci ! Votre message a bien été envoyé.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Mohcine Sassioui - Portfolio Data Scientist</p>
+            <a href="#hero" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction Churn - Mohcine Sassioui</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .back-btn:hover {
+            color: var(--primary);
+        }
+        .project-details {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section {
+            margin-bottom: 40px;
+        }
+        .project-section h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0 40px;
+        }
+        .code-block {
+            background: #011627;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+            margin: 20px 0;
+        }
+        .keyword { color: #c792ea; }
+        .string { color: #ecc48d; }
+        .comment { color: #637777; font-style: italic; }
+        .function { color: #82aaff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="project-header">
+            <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+            <h1 class="title" style="font-size: 3rem;">Prédiction d'Attrition Client (Churn)</h1>
+            <p class="section-subtitle">Identification des clients à risque à l'aide de modèles d'arbres boostés.</p>
+            
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">SHAP</span>
+            </div>
+        </header>
+
+        <main class="project-details">
+            <div class="glass-card">
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif du Projet</h3>
+                    <p>Dans l'industrie des télécommunications, l'acquisition d'un nouveau client coûte beaucoup plus cher que la fidélisation d'un client existant. L'objectif de ce projet était de construire un modèle de Machine Learning capable de prédire quels clients sont les plus susceptibles de résilier leur abonnement le mois suivant.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-database"></i> Les Données</h3>
+                    <p>Le dataset comprenait environ 100 000 entrées avec des variables telles que :</p>
+                    <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); margin-top: 10px;">
+                        <li><strong>Démographie :</strong> Âge, sexe, localisation.</li>
+                        <li><strong>Services :</strong> Type d'abonnement, services internet, sécurité en ligne.</li>
+                        <li><strong>Facturation :</strong> Montant mensuel, méthode de paiement, facturation dématérialisée.</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-cogs"></i> Modélisation & Implémentation</h3>
+                    <p>Après une phase approfondie d'Analyse Exploratoire des Données (EDA) et de Feature Engineering (encodage, gestion des valeurs manquantes, SMOTE pour le déséquilibre des classes), j'ai opté pour <strong>XGBoost</strong> en raison de ses performances supérieures sur les données tabulaires.</p>
+                    
+                    <div class="code-block">
+<pre><span class="keyword">import</span> xgboost <span class="keyword">as</span> xgb
+<span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> RandomizedSearchCV
+
+<span class="comment"># Définition du modèle</span>
+xgb_model = xgb.XGBClassifier(objective=<span class="string">'binary:logistic'</span>, eval_metric=<span class="string">'auc'</span>)
+
+<span class="comment"># Optimisation des hyperparamètres</span>
+param_grid = {
+    <span class="string">'max_depth'</span>: [3, 4, 5],
+    <span class="string">'learning_rate'</span>: [0.01, 0.1, 0.2],
+    <span class="string">'n_estimators'</span>: [100, 200, 300]
+}
+
+search = RandomizedSearchCV(xgb_model, param_grid, cv=<span class="number">5</span>, scoring=<span class="string">'roc_auc'</span>)
+search.fit(X_train_scaled, y_train_resampled)
+</pre>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-chart-line"></i> Résultats et Interprétabilité (SHAP)</h3>
+                    <p>Le modèle final a atteint un <strong>ROC-AUC de 0.89</strong> et un Recall de 0.82 (priorité à la détection des churners potentiels).</p>
+                    <p>Pour rendre le modèle "boîte noire" explicable aux équipes marketing, j'ai utilisé <strong>SHAP values</strong>. Cela a permis de déterminer que les contrats mensuels ("Month-to-month") et l'absence de fibre optique étaient les principaux facteurs de désabonnement.</p>
+                </div>
+            </div>
+        </main>
+        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted);">
+            <p>&copy; 2026 Mohcine Sassioui</p>
+        </footer>
+    </div>
+</body>
+</html>

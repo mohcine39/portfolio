@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Recommandation - Mohcine Sassioui</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .back-btn:hover {
+            color: var(--primary);
+        }
+        .project-details {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section {
+            margin-bottom: 40px;
+        }
+        .project-section h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0 40px;
+        }
+        .code-block {
+            background: #011627;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+            margin: 20px 0;
+        }
+        .keyword { color: #c792ea; }
+        .string { color: #ecc48d; }
+        .comment { color: #637777; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="project-header">
+            <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+            <h1 class="title" style="font-size: 3rem;">Système de Recommandation</h1>
+            <p class="section-subtitle">Algorithme de filtrage collaboratif pour personnaliser l'expérience e-commerce.</p>
+            
+            <div class="tech-stack">
+                <span class="tag">PySpark</span>
+                <span class="tag">ALS</span>
+                <span class="tag">Flask</span>
+                <span class="tag">Redis</span>
+            </div>
+        </header>
+
+        <main class="project-details">
+            <div class="glass-card">
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif du Projet</h3>
+                    <p>Augmenter le panier moyen et le taux de conversion d'un site de e-commerce en proposant aux utilisateurs des articles très pertinents. La recommandation devait se faire en temps réel (&lt; 100ms de latence) lors de la navigation.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-network-wired"></i> Approche & Algorithme</h3>
+                    <p>Le système repose sur un <strong>Filtrage Collaboratif</strong> utilisant l'algorithme des Moindres Carrés Alternés (ALS - Alternating Least Squares) implémenté avec Apache Spark (PySpark MLlib) pour gérer un volume de données massif (Big Data).</p>
+                    <p>L'algorithme décompose la grande matrice "Utilisateurs x Articles" en deux matrices plus petites représentant les caractéristiques latentes des utilisateurs et des produits.</p>
+                    
+                    <div class="code-block">
+<pre><span class="keyword">from</span> pyspark.ml.recommendation <span class="keyword">import</span> ALS
+
+<span class="comment"># Configuration du modèle ALS</span>
+als = ALS(
+    maxIter=<span class="number">10</span>, 
+    regParam=<span class="number">0.01</span>, 
+    userCol=<span class="string">"userId"</span>, 
+    itemCol=<span class="string">"productId"</span>, 
+    ratingCol=<span class="string">"interactionScore"</span>,
+    coldStartStrategy=<span class="string">"drop"</span>
+)
+
+<span class="comment"># Entraînement sur le cluster Spark</span>
+model = als.fit(training_data)
+
+<span class="comment"># Génération de 5 recommandations pour tous les utilisateurs</span>
+user_recs = model.recommendForAllUsers(<span class="number">5</span>)
+</pre>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-server"></i> Architecture de Production</h3>
+                    <p>Pour assurer une faible latence en production, les recommandations pré-calculées par batch (Spark) sont exportées vers une base de données en mémoire <strong>Redis</strong>. Une API développée avec <strong>Flask</strong> interroge Redis pour afficher les produits à l'utilisateur quasi-instantanément.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-chart-bar"></i> Impact Business</h3>
+                    <p>Le déploiement a été validé par un test A/B sur 30 jours contre l'ancien système basé sur les "Meilleures ventes". Les résultats ont montré :</p>
+                    <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-muted); margin-top: 10px;">
+                        <li>Une augmentation de <strong>8% du panier moyen</strong>.</li>
+                        <li>Une hausse de 12% du taux de clics (CTR) sur la page d'accueil.</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted);">
+            <p>&copy; 2026 Mohcine Sassioui</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse NLP - Mohcine Sassioui</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .back-btn:hover {
+            color: var(--primary);
+        }
+        .project-details {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .project-section {
+            margin-bottom: 40px;
+        }
+        .project-section h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0 40px;
+        }
+        .code-block {
+            background: #011627;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            border: 1px solid var(--glass-border);
+            margin: 20px 0;
+        }
+        .keyword { color: #c792ea; }
+        .string { color: #ecc48d; }
+        .comment { color: #637777; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="project-header">
+            <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+            <h1 class="title" style="font-size: 3rem;">Analyse de Sentiments (NLP)</h1>
+            <p class="section-subtitle">Fine-tuning d'un modèle BERT pour la classification d'avis e-commerce.</p>
+            
+            <div class="tech-stack">
+                <span class="tag">PyTorch</span>
+                <span class="tag">HuggingFace</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">Docker</span>
+            </div>
+        </header>
+
+        <main class="project-details">
+            <div class="glass-card">
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif du Projet</h3>
+                    <p>Analyser et classifier automatiquement de grands volumes de retours clients (commentaires, avis) afin de déterminer si le sentiment est Positif, Neutre ou Négatif. Cela permet aux équipes produit d'agir rapidement en cas de pic d'insatisfaction.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-brain"></i> Architecture & Modèle</h3>
+                    <p>Pour cette tâche de Traitement du Langage Naturel (NLP), j'ai choisi l'architecture Transformers en utilisant le modèle pré-entraîné <strong>CamemBERT</strong> (optimisé pour le français), fourni par la bibliothèque HuggingFace. J'ai effectué un fine-tuning sur un dataset de plus de 50 000 avis annotés.</p>
+                    
+                    <div class="code-block">
+<pre><span class="keyword">from</span> transformers <span class="keyword">import</span> AutoTokenizer, AutoModelForSequenceClassification
+
+<span class="comment"># Chargement du modèle et tokenizer</span>
+model_name = <span class="string">"camembert-base"</span>
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=<span class="number">3</span>)
+
+<span class="comment"># Tokenization du texte brut</span>
+inputs = tokenizer(<span class="string">"La livraison a été incroyablement rapide, je recommande !"</span>, 
+                   return_tensors=<span class="string">"pt"</span>)
+
+<span class="comment"># Inférence</span>
+outputs = model(**inputs)
+</pre>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-laptop-code"></i> Interface Utilisateur (Streamlit)</h3>
+                    <p>Afin de rendre ce modèle accessible aux membres non techniques de l'équipe (marketing, produit), j'ai développé une application web interactive avec <strong>Streamlit</strong>. L'interface permet d'importer un fichier CSV d'avis et d'obtenir un tableau de bord récapitulatif généré en quelques secondes.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-rocket"></i> Déploiement</h3>
+                    <p>L'application a été conteneurisée avec <strong>Docker</strong> pour garantir sa portabilité, puis déployée sur une instance Cloud (AWS EC2). Un système d'intégration continue (CI/CD) a été mis en place via GitHub Actions.</p>
+                </div>
+            </div>
+        </main>
+        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted);">
+            <p>&copy; 2026 Mohcine Sassioui</p>
+        </footer>
+    </div>
+</body>
+</html>
