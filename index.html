@@ -70,15 +70,20 @@
                     <p>Mon objectif est d'aider les entreprises à prendre des décisions stratégiques basées sur la data. Je maîtrise l'ensemble du cycle de vie de la donnée : de l'extraction (ETL) à la mise en production des modèles (MLOps), en passant par l'analyse exploratoire et la data visualisation.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-box">
-                        <i class="fas fa-database stat-icon"></i>
-                        <h4>Data Processing</h4>
-                        <p>ETL, Big Data, SQL</p>
-                    </div>
-                    <div class="stat-box">
-                        <i class="fas fa-brain stat-icon"></i>
-                        <h4>Machine Learning</h4>
-                        <p>Scikit-learn, XGBoost, PyTorch</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>sassiouimohcin2000@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Mobilité Nationale, France</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+33 6 12 59 73 61</p>
+                        </div>
+                    </div>kit-learn, XGBoost, PyTorch</p>
                     </div>
                     <div class="stat-box">
                         <i class="fas fa-chart-pie stat-icon"></i>
@@ -97,31 +102,58 @@
             <p class="section-subtitle">Mon évolution académique et professionnelle.</p>
             <div class="timeline">
 
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
-                        <h3>Alternance Data Scientist</h3>
-                        <h4>Devoteam - Massy</h4>
+                        <div class="timeline-header">
+                            <img src="https://logo.clearbit.com/devoteam.com" alt="Devoteam" class="company-logo">
+                            <div>
+                                <h3>Alternance Data Scientist - Observabilité/IA</h3>
+                                <h4>Devoteam - Massy</h4>
+                            </div>
+                        </div>
                         <span class="timeline-date">Octobre 2023 - Septembre 2024</span>
-                        <p>Développement de modèles de détection d'anomalies (Deep Learning, Séries Temporelles, NLP). Déploiement distribué avec Apache Spark et Kubernetes.</p>
+                        <p>Développement de modèles de détection d'anomalies multi-cloud (LSTM, Autoencoder, Séries Temporelles). Analyse de logs via NLP (spaCy, Hugging Face). Déploiement distribué avec Apache Spark et Kubernetes.</p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">Deep Learning</span>
+                            <span class="badge">Spark</span>
+                            <span class="badge">Kubernetes</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
-                        <h3>Stage Data Scientist</h3>
-                        <h4>Smart Building Energies (Vinci) - Lille</h4>
+                        <div class="timeline-header">
+                            <img src="https://logo.clearbit.com/vinci.com" alt="Vinci" class="company-logo">
+                            <div>
+                                <h3>Stage Data Scientist</h3>
+                                <h4>Smart Building Energies (Vinci) - Lille</h4>
+                            </div>
+                        </div>
                         <span class="timeline-date">Avril 2023 - Septembre 2023</span>
-                        <p>Développement d'un système prédictif pour optimiser la consommation énergétique (XGBoost, LSTM). Extraction Azure Data Explorer et dashboards Power BI.</p>
+                        <p>Optimisation de la consommation énergétique via Machine Learning (XGBoost, LSTM). Extraction et analyse via Azure Data Explorer (KQL) et dashboards Power BI. Déploiement sur Azure Machine Learning.</p>
+                        <div class="tech-badges">
+                            <span class="badge">XGBoost</span>
+                            <span class="badge">Azure</span>
+                            <span class="badge">KQL</span>
+                            <span class="badge">Power BI</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
-                        <h3>Diplôme d'ingénieur en informatique (Double Diplôme)</h3>
-                        <h4>IMT Nord Europe / ENSMR</h4>
+                        <div class="timeline-header">
+                            <img src="https://logo.clearbit.com/imt-nord-europe.fr" alt="IMT" class="company-logo">
+                            <div>
+                                <h3>Diplôme d'ingénieur en informatique (Double Diplôme)</h3>
+                                <h4>IMT Nord Europe / ENSMR (Mines de Rabat)</h4>
+                            </div>
+                        </div>
                         <span class="timeline-date">2020 - 2024</span>
-                        <p>Double cursus d'ingénierie franco-marocain. Spécialisation en Sciences et Technologie du Numérique et Management des Systèmes d'Information.</p>
+                        <p>Spécialisation en Sciences et Technologie du Numérique et Management des Systèmes d'Information. Parcours d'excellence franco-marocain.</p>
                     </div>
                 </div>
             </div>
@@ -186,17 +218,16 @@
             
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card glass-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #3b82f6;">
-                        <i class="fas fa-users-slash"></i>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="assets/images/churn.png" alt="Prediction Churn" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-info">
                         <h3>Prédiction d'Attrition Client (Churn)</h3>
-                        <p>Développement d'un modèle XGBoost pour identifier les clients à risque. Analyse de la feature importance pour orienter les campagnes marketing, résultant en une baisse de 15% du taux d'attrition.</p>
+                        <p>Développement d'un modèle XGBoost pour identifier les clients à risque. Analyse de la feature importance via SHAP pour orienter les campagnes marketing.</p>
                         <div class="project-tags">
                             <span class="tag tag-small">Python</span>
                             <span class="tag tag-small">XGBoost</span>
-                            <span class="tag tag-small">Pandas</span>
                             <span class="tag tag-small">SHAP</span>
                         </div>
                         <a href="projet-churn.html" class="btn-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
@@ -204,13 +235,13 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card glass-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #10b981;">
-                        <i class="fas fa-comment-dots"></i>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="assets/images/nlp.png" alt="Analyse NLP" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-info">
                         <h3>Analyse de Sentiments (NLP)</h3>
-                        <p>Création d'un pipeline NLP avec Hugging Face Transformers (BERT) pour analyser plus de 50 000 avis clients. Tableau de bord interactif pour suivre la satisfaction en temps réel.</p>
+                        <p>Pipeline NLP avec Hugging Face Transformers (BERT) pour l'analyse d'avis clients. Dashboard interactif Streamlit pour le suivi en temps réel.</p>
                         <div class="project-tags">
                             <span class="tag tag-small">PyTorch</span>
                             <span class="tag tag-small">Transformers</span>
@@ -221,16 +252,16 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card glass-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #1f2937, #111827); display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #8b5cf6;">
-                        <i class="fas fa-shopping-cart"></i>
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="assets/images/reco.png" alt="Systeme Recommandation" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-info">
                         <h3>Système de Recommandation E-commerce</h3>
-                        <p>Implémentation d'un algorithme de filtrage collaboratif et basé sur le contenu pour suggérer des produits pertinents. Augmentation du panier moyen de 8% suite au déploiement (A/B test).</p>
+                        <p>Algorithme de filtrage collaboratif (ALS) sur Spark pour suggérer des produits. Augmentation du panier moyen validée par A/B test.</p>
                         <div class="project-tags">
-                            <span class="tag tag-small">Spark MLlib</span>
-                            <span class="tag tag-small">Python</span>
+                            <span class="tag tag-small">PySpark</span>
+                            <span class="tag tag-small">ALS</span>
                             <span class="tag tag-small">Flask</span>
                         </div>
                         <a href="projet-reco.html" class="btn-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
