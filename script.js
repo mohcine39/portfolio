@@ -78,18 +78,37 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
             btn.disabled = true;
             
-            // Simulate network request
-            setTimeout(() => {
+            // Gather form data
+            const formData = new FormData(form);
+            
+            // Send network request to FormSubmit
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
                 form.reset();
+                formSuccess.style.color = '#10b981';
+                formSuccess.innerHTML = 'Merci ! Votre message a bien été envoyé.';
                 formSuccess.style.display = 'block';
                 btn.innerHTML = originalText;
                 btn.disabled = false;
                 
-                // Hide success message after 5 seconds
                 setTimeout(() => {
                     formSuccess.style.display = 'none';
                 }, 5000);
-            }, 1500);
+            })
+            .catch(error => {
+                formSuccess.style.color = '#ef4444'; // Red error color
+                formSuccess.innerHTML = 'Une erreur est survenue. Veuillez réessayer.';
+                formSuccess.style.display = 'block';
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
         });
     }
 });
