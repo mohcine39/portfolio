@@ -81,15 +81,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Gather form data
             const formData = new FormData(form);
             
+            // Convertir l'URL en endpoint AJAX pour éviter les erreurs de redirection/JSON
+            const ajaxUrl = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
+            
             // Send network request to FormSubmit
-            fetch(form.action, {
+            fetch(ajaxUrl, {
                 method: 'POST',
                 body: formData,
                 headers: {
                     'Accept': 'application/json'
                 }
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) throw new Error('Erreur réseau');
+                return response.json();
+            })
             .then(data => {
                 form.reset();
                 formSuccess.style.color = '#10b981';
