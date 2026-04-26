@@ -17,11 +17,12 @@
     <!-- Navbar -->
     <nav id="navbar">
         <div class="container nav-container">
-            <a href="#hero" class="logo">Data<span>Sci</span></a>
+            <a href="#hero" class="logo">s.<span>mohcine</span></a>
             <ul class="nav-links">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#skills">Compétences</a></li>
+                <li><a href="#interests">Intérêts</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -99,49 +100,89 @@
     <section id="parcours" class="section">
         <div class="container">
             <h2 class="section-title">Mon Parcours</h2>
-            <p class="section-subtitle">Mon évolution académique et professionnelle.</p>
+
+            <!-- === EXPÉRIENCES PROFESSIONNELLES === -->
+            <h3 class="parcours-sub-title"><i class="fas fa-briefcase"></i> Expériences Professionnelles</h3>
             <div class="timeline">
 
+                <!-- CARCO CDI -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <img src="https://logo.clearbit.com/carco.fr" alt="CARCO" class="company-logo" onerror="this.style.display='none'">
+                            <div>
+                                <h3>Data Engineer / Data Scientist</h3>
+                                <h4>CARCO — Paris, France</h4>
+                            </div>
+                        </div>
+                        <span class="timeline-date">Janvier 2025 – Présent &nbsp;|&nbsp; CDI</span>
+                        <ul class="timeline-bullets">
+                            <li><strong>Mission :</strong> Traitement et fiabilisation des données DSN assurance — analyse, conformité réglementaire et data quality.</li>
+                            <li><strong>Objectif :</strong> Concevoir un entrepôt de données actuariel et automatiser les processus internes (reporting, détection d'anomalies, correction de bases) pour réduire significativement le temps de traitement.</li>
+                            <li><strong>Résultat :</strong> Dashboards analytiques livrés aux équipes métiers ; modèles NLP déployés pour la correction des données adhérents ; intégration d'APIs pour l'enrichissement des données.</li>
+                        </ul>
+                        <p class="timeline-tools"><i class="fas fa-tools"></i> <strong>Outils :</strong> Python, SQL, VBA, Streamlit, NLP, APIs REST, Excel, Oracle, Power BI, DSN, Data Quality.</p>
+                        <div class="tech-badges">
+                            <span class="badge">Python</span><span class="badge">SQL</span><span class="badge">NLP</span><span class="badge">Power BI</span><span class="badge">Oracle</span><span class="badge">Streamlit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Devoteam Alternance -->
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
                         <div class="timeline-header">
                             <img src="https://logo.clearbit.com/devoteam.com" alt="Devoteam" class="company-logo">
                             <div>
-                                <h3>Alternance Data Scientist - Observabilité/IA</h3>
-                                <h4>Devoteam - Massy</h4>
+                                <h3>Data Engineer — Observabilité / IA</h3>
+                                <h4>Devoteam — Massy, France</h4>
                             </div>
                         </div>
-                        <span class="timeline-date">Octobre 2023 - Septembre 2024</span>
-                        <p>Développement de modèles de détection d'anomalies multi-cloud (LSTM, Autoencoder, Séries Temporelles). Analyse de logs via NLP (spaCy, Hugging Face). Déploiement distribué avec Apache Spark et Kubernetes.</p>
+                        <span class="timeline-date">Octobre 2023 – Septembre 2024 &nbsp;|&nbsp; Alternance</span>
+                        <ul class="timeline-bullets">
+                            <li><strong>Mission :</strong> Conception et gestion de pipelines de données distribuées avec Apache Spark et Kubernetes pour le Machine Learning à grande échelle.</li>
+                            <li><strong>Objectif :</strong> Développer des solutions IA de détection d'anomalies et assurer l'observabilité des flux de données dans des environnements Big Data multi-cloud.</li>
+                            <li><strong>Résultat :</strong> Mise en place de Prometheus pour une surveillance proactive des flux ; modèles LSTM et Autoencoder déployés avec succès en environnement distribué.</li>
+                        </ul>
+                        <p class="timeline-tools"><i class="fas fa-tools"></i> <strong>Outils :</strong> Python, Apache Spark, Kubernetes, Prometheus, NLP (spaCy, Hugging Face), SQL, Git, Machine Learning.</p>
                         <div class="tech-badges">
-                            <span class="badge">Python</span>
-                            <span class="badge">Deep Learning</span>
-                            <span class="badge">Spark</span>
-                            <span class="badge">Kubernetes</span>
+                            <span class="badge">Spark</span><span class="badge">Kubernetes</span><span class="badge">LSTM</span><span class="badge">Prometheus</span><span class="badge">NLP</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- Vinci Stage -->
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
                         <div class="timeline-header">
                             <img src="https://logo.clearbit.com/vinci.com" alt="Vinci" class="company-logo">
                             <div>
-                                <h3>Stage Data Scientist</h3>
-                                <h4>Smart Building Energies (Vinci) - Lille</h4>
+                                <h3>Data Scientist / Engineer</h3>
+                                <h4>Smart Building Energies (Vinci) — Lille, France</h4>
                             </div>
                         </div>
-                        <span class="timeline-date">Avril 2023 - Septembre 2023</span>
-                        <p>Optimisation de la consommation énergétique via Machine Learning (XGBoost, LSTM). Extraction et analyse via Azure Data Explorer (KQL) et dashboards Power BI. Déploiement sur Azure Machine Learning.</p>
+                        <span class="timeline-date">Avril 2023 – Septembre 2023 &nbsp;|&nbsp; Stage</span>
+                        <ul class="timeline-bullets">
+                            <li><strong>Mission :</strong> Développement d'un modèle prédictif pour l'optimisation de la consommation énergétique des bâtiments intelligents.</li>
+                            <li><strong>Objectif :</strong> Extraire et analyser les données depuis Azure Data Explorer et MySQL, puis implémenter des modèles LSTM et Deep Learning pour des prédictions fiables.</li>
+                            <li><strong>Résultat :</strong> Réduction mesurable de la consommation énergétique ; dashboards Power BI déployés pour le suivi en temps réel par les équipes métiers.</li>
+                        </ul>
+                        <p class="timeline-tools"><i class="fas fa-tools"></i> <strong>Outils :</strong> Python, Azure Data Explorer (ADX), KQL, MySQL, XGBoost, LSTM, Power BI, Azure Machine Learning.</p>
                         <div class="tech-badges">
-                            <span class="badge">XGBoost</span>
-                            <span class="badge">Azure</span>
-                            <span class="badge">KQL</span>
-                            <span class="badge">Power BI</span>
+                            <span class="badge">XGBoost</span><span class="badge">Azure</span><span class="badge">KQL</span><span class="badge">Power BI</span><span class="badge">LSTM</span>
                         </div>
                     </div>
                 </div>
+
+            </div><!-- /timeline -->
+
+            <!-- === PARCOURS ACADÉMIQUE === -->
+            <h3 class="parcours-sub-title" style="margin-top:60px;"><i class="fas fa-graduation-cap"></i> Parcours Académique</h3>
+            <div class="timeline">
+
                 <div class="timeline-item reveal">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
@@ -152,59 +193,129 @@
                                 <h4>IMT Nord Europe / ENSMR (Mines de Rabat)</h4>
                             </div>
                         </div>
-                        <span class="timeline-date">2020 - 2024</span>
-                        <p>Spécialisation en Sciences et Technologie du Numérique et Management des Systèmes d'Information. Parcours d'excellence franco-marocain.</p>
+                        <span class="timeline-date">2020 – 2024</span>
+                        <p>Spécialisation en Sciences et Technologie du Numérique (IMT) et Management des Systèmes d'Information (ENSMR). Parcours d'excellence franco-marocain.</p>
                     </div>
                 </div>
-            </div>
+
+            </div><!-- /timeline -->
         </div>
     </section>
+
+
+
 
     <!-- Skills Section -->
     <section id="skills" class="section bg-darker">
         <div class="container">
             <h2 class="section-title">Mes Compétences</h2>
+
+            <h3 class="parcours-sub-title" style="margin-bottom:24px;"><i class="fas fa-laptop-code"></i> Compétences Professionnelles</h3>
             <div class="skills-grid">
-                <!-- Skill Category 1 -->
                 <div class="skill-category glass-card">
                     <h3><i class="fas fa-code"></i> Langages</h3>
                     <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">R</span>
-                        <span class="tag">Bash</span>
+                        <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">Java</span><span class="tag">Bash</span>
                     </div>
                 </div>
-                <!-- Skill Category 2 -->
                 <div class="skill-category glass-card">
-                    <h3><i class="fas fa-robot"></i> Machine/Deep Learning</h3>
+                    <h3><i class="fas fa-robot"></i> Machine / Deep Learning</h3>
                     <div class="tags">
-                        <span class="tag">Scikit-Learn</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">Keras</span>
-                        <span class="tag">NLP</span>
+                        <span class="tag">Scikit-Learn</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">Keras</span><span class="tag">XGBoost</span><span class="tag">NLP</span>
                     </div>
                 </div>
-                <!-- Skill Category 3 -->
                 <div class="skill-category glass-card">
-                    <h3><i class="fas fa-server"></i> Data Engineering & Cloud</h3>
+                    <h3><i class="fas fa-server"></i> Big Data &amp; Engineering</h3>
                     <div class="tags">
-                        <span class="tag">Pandas</span>
-                        <span class="tag">PySpark</span>
-                        <span class="tag">AWS / GCP</span>
-                        <span class="tag">Docker</span>
+                        <span class="tag">Pandas</span><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Hadoop</span><span class="tag">Airflow</span><span class="tag">MongoDB</span>
                     </div>
                 </div>
-                <!-- Skill Category 4 -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud &amp; MLOps</h3>
+                    <div class="tags">
+                        <span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">AWS</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Prometheus</span>
+                    </div>
+                </div>
                 <div class="skill-category glass-card">
                     <h3><i class="fas fa-chart-line"></i> Visualisation</h3>
                     <div class="tags">
-                        <span class="tag">Matplotlib</span>
-                        <span class="tag">Seaborn</span>
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Power BI</span>
+                        <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Streamlit</span><span class="tag">Plotly</span><span class="tag">Seaborn</span>
                     </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tools"></i> Outils &amp; DevOps</h3>
+                    <div class="tags">
+                        <span class="tag">Git</span><span class="tag">Oracle</span><span class="tag">MySQL</span><span class="tag">Jupyter</span><span class="tag">Excel / VBA</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="parcours-sub-title" style="margin-top:50px; margin-bottom:24px;"><i class="fas fa-users"></i> Compétences Personnelles</h3>
+            <div class="skills-grid softskills-grid">
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-lightbulb softskill-icon"></i>
+                    <h4>Force de proposition</h4>
+                    <p>Identifier des opportunités d'amélioration et proposer des solutions innovantes en autonomie.</p>
+                </div>
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-puzzle-piece softskill-icon"></i>
+                    <h4>Résolution de problèmes</h4>
+                    <p>Approche analytique et structurée face à des défis techniques et métiers complexes.</p>
+                </div>
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-comments softskill-icon"></i>
+                    <h4>Communication technique</h4>
+                    <p>Restitution claire des résultats data à des audiences techniques et non-techniques.</p>
+                </div>
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-handshake softskill-icon"></i>
+                    <h4>Esprit d'équipe</h4>
+                    <p>Collaboration efficace dans des équipes pluridisciplinaires en environnement agile.</p>
+                </div>
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-sync-alt softskill-icon"></i>
+                    <h4>Adaptabilité</h4>
+                    <p>Montée rapide en compétences sur de nouveaux outils, stacks et contextes métiers.</p>
+                </div>
+                <div class="skill-category glass-card softskill-card">
+                    <i class="fas fa-search softskill-icon"></i>
+                    <h4>Curiosité &amp; Veille</h4>
+                    <p>Suivi actif des avancées en IA, Data Science et ingénierie des données.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests" class="section">
+        <div class="container">
+            <h2 class="section-title">Centres d'intérêts</h2>
+            <p class="section-subtitle">Ce qui nourrit mon profil analytique et ma curiosité technologique.</p>
+            <div class="interests-grid">
+                <div class="interest-card glass-card reveal">
+                    <div class="interest-icon">♟</div>
+                    <h4>Échecs</h4>
+                    <p>Pensée stratégique, anticipation et prise de décision sous contrainte — un véritable entraînement cognitif.</p>
+                </div>
+                <div class="interest-card glass-card reveal">
+                    <div class="interest-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Recherche en IA</h4>
+                    <p>Lecture de papers et suivi des avancées (LLMs, Diffusion, RL) via ArXiv et Hugging Face.</p>
+                </div>
+                <div class="interest-card glass-card reveal">
+                    <div class="interest-icon"><i class="fas fa-code"></i></div>
+                    <h4>Programmation</h4>
+                    <p>Projets personnels, algorithmes et automatisation — le code comme vecteur de création.</p>
+                </div>
+                <div class="interest-card glass-card reveal">
+                    <div class="interest-icon"><i class="fas fa-newspaper"></i></div>
+                    <h4>Veille technologique</h4>
+                    <p>Lecture régulière de blogs tech (Towards Data Science, Google AI Blog, MIT Tech Review).</p>
+                </div>
+                <div class="interest-card glass-card reveal">
+                    <div class="interest-icon"><i class="fab fa-kaggle"></i></div>
+                    <h4>Compétitions Kaggle</h4>
+                    <p>Challenges de Data Science pour affûter les compétences en modélisation et feature engineering.</p>
                 </div>
             </div>
         </div>
@@ -277,8 +388,8 @@
             <h2 class="section-title">Contactez-moi</h2>
             <div class="contact-wrapper">
                 <div class="contact-info glass-card">
-                    <h3>Discutons de vos données</h3>
-                    <p>Je suis actuellement ouvert à de nouvelles opportunités. N'hésitez pas à me contacter pour un projet ou simplement pour dire bonjour !</p>
+                    <h3>Demande de collaboration</h3>
+                    <p>Prêt à transformer vos données en valeur stratégique ? Échangeons sur vos futurs défis technologiques.</p>
                     <ul class="contact-details">
                         <li><i class="fas fa-envelope"></i> sassiouimohcin2000@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Mobilité Nationale, France</li>
@@ -287,7 +398,7 @@
                     <div class="social-links">
                         <a href="https://github.com/mohcine39" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://linkedin.com/in/mohcine-sassioui" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-kaggle"></i></a>
+                        <a href="https://www.kaggle.com/mohcinesassi" target="_blank"><i class="fab fa-kaggle"></i></a>
                     </div>
                 </div>
                 
@@ -320,6 +431,9 @@
     <footer>
         <div class="container footer-content">
             <p>&copy; 2026 Mohcine Sassioui - Portfolio Data Scientist</p>
+            <a href="data engineer.pdf" class="btn btn-secondary btn-cv-footer" download>
+                <i class="fas fa-download"></i> Télécharger mon CV
+            </a>
             <a href="#hero" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
