@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Client PFE - s.mohcine</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back-btn:hover {
+            color: var(--primary);
+        }
+        .project-details {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+        .project-section {
+            margin-bottom: 40px;
+        }
+        .project-section h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0 40px;
+            flex-wrap: wrap;
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .result-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        .result-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .cluster-card {
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--primary);
+            background: rgba(255, 255, 255, 0.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="project-header">
+            <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Retour au portfolio</a>
+            <h1 class="title" style="font-size: 3rem;">Segmentation Client & Profilage</h1>
+            <p class="section-subtitle">Projet de Fin d'Études (PFE) - Analyse IA du comportement d'achat.</p>
+            
+            <div class="tech-stack">
+                <span class="tag">Python</span>
+                <span class="tag">Streamlit</span>
+                <span class="tag">K-Means</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">Plotly</span>
+            </div>
+        </header>
+
+        <main class="project-details">
+            <div class="glass-card">
+                <div class="project-section">
+                    <h3><i class="fas fa-bullseye"></i> Objectif du Projet</h3>
+                    <p>Développer un système intelligent de segmentation clientèle pour une plateforme e-commerce. L'objectif était de passer d'un marketing de masse à un marketing ciblé en identifiant les groupes de clients homogènes selon leurs habitudes de consommation.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-chart-pie"></i> Méthodologie : Clustering K-Means</h3>
+                    <p>Après un nettoyage approfondi et une normalisation des données (StandardScaler), j'ai appliqué l'algorithme <strong>K-Means</strong>. L'utilisation de la méthode du coude (Elbow Method) et de l'analyse du score de silhouette a permis d'isoler 4 segments optimaux :</p>
+                    <div class="cluster-grid" style="margin-top: 20px;">
+                        <div class="cluster-card">
+                            <strong>1. ÉCONOMES PRAGMATIQUES</strong> : Clients avec un revenu modéré et des dépenses contrôlées.
+                        </div>
+                        <div class="cluster-card">
+                            <strong>2. ACHETEURS WEB</strong> : Forte propension aux achats en ligne, sensibles aux promotions digitales.
+                        </div>
+                        <div class="cluster-card">
+                            <strong>3. VIP TRADITIONNELS</strong> : Hauts revenus, score de dépense élevé, fidélité premium.
+                        </div>
+                        <div class="cluster-card">
+                            <strong>4. FIDÈLES DE PROXIMITÉ</strong> : Fréquence de visite élevée, panier moyen stable.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-robot"></i> Modèle Prédictif (Random Forest)</h3>
+                    <p>Pour automatiser l'affectation des nouveaux clients aux segments identifiés, j'ai entraîné un classifieur <strong>Random Forest</strong>. Ce modèle permet de prédire en temps réel le profil d'un client dès ses premières interactions.</p>
+                </div>
+
+                <div class="project-section">
+                    <h3><i class="fas fa-check-circle"></i> Résultats Clés</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <span class="result-value">78.7%</span>
+                            <span class="result-label">Précision (Random Forest)</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">4</span>
+                            <span class="result-label">Segments Identifiés</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-value">0.145</span>
+                            <span class="result-label">Score de Silhouette</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-section" style="text-align: center; margin-top: 60px;">
+                    <a href="https://segmentation-client-jbnbl4m5tj3hnwgcj4gnj7.streamlit.app/" target="_blank" class="btn primary" style="padding: 15px 40px; font-size: 1.1rem; background: var(--secondary); color: white; border-radius: 30px; text-decoration: none; font-weight: bold;"><i class="fas fa-rocket"></i> Lancer l'Application Streamlit</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer style="text-align: center; padding: 40px 0; color: var(--text-muted);">
+            <p>&copy; 2026 Mohcine Sassioui | s.mohcine</p>
+        </footer>
+    </div>
+</body>
+</html>
